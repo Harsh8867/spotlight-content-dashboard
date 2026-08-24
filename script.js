@@ -1,51 +1,51 @@
 const categories = [
   {
     name: "Foundation",
-    count: 5,
+    count: 12,
     description: "Intro · Roadmap · Terminology",
     color: "#16d9ff",
     icon: "foundation",
-    url: "#"
+    url: "https://gmrgroup.sharepoint.com/sites/LearningGMR/SitePages/AI-Foundations.aspx"
   },
   {
     name: "Engineering",
-    count: 6,
+    count: 18,
     description: "LLMs · RAG · System Design",
     color: "#9d4cff",
     icon: "engineering",
-    url: "#"
+    url: "https://gmrgroup.sharepoint.com/sites/LearningGMR/SitePages/AI-Engineering.aspx"
   },
   {
     name: "Tools & Interactions",
-    count: 6,
+    count: 13,
     description: "Prompting · GenAI · Libraries",
     color: "#2ee98a",
     icon: "tools",
-    url: "#"
+    url: "https://gmrgroup.sharepoint.com/sites/LearningGMR/SitePages/AI-Tools-%26-Interactions.aspx"
   },
   {
     name: "Use Cases",
-    count: 3,
+    count: 9,
     description: "Aviation · Energy · Sports",
     color: "#ff6242",
     icon: "usecases",
-    url: "#"
+    url: "https://gmrgroup.sharepoint.com/sites/LearningGMR/SitePages/AI-Use-Cases.aspx"
   },
   {
     name: "Governance",
-    count: 6,
+    count: 11,
     description: "Responsible AI · Policy · Risk",
     color: "#ffc72c",
     icon: "governance",
-    url: "#"
+    url: "https://gmrgroup.sharepoint.com/sites/LearningGMR/SitePages/AI-Governance.aspx"
   },
   {
     name: "Strategy & Change",
-    count: 6,
+    count: 8,
     description: "Leadership · AI Capability Building",
     color: "#ff3e9d",
     icon: "strategy",
-    url: "#"
+    url: "https://gmrgroup.sharepoint.com/sites/LearningGMR/SitePages/AI-Strategy-%26-Change.aspx"
   }
 ];
 
@@ -89,22 +89,35 @@ const icons = {
 const grid = document.getElementById("categoryGrid");
 
 categories.forEach((category) => {
-  const card = document.createElement("a");
+  const card = document.createElement("div");
   card.className = "category-card";
-  card.href = category.url;
   card.style.setProperty("--accent", category.color);
-  card.setAttribute("aria-label", `${category.name}: ${category.count} plus items`);
+  card.setAttribute("role", "button");
+  card.setAttribute("tabindex", "0");
+  card.setAttribute("aria-label", `${category.name}: ${category.count} items`);
 
   card.innerHTML = `
     <div class="icon-wrap">${icons[category.icon]}</div>
-    <div class="count">${category.count}<span>+</span></div>
+    <div class="count">${category.count}</div>
     <div class="category-name">${category.name}</div>
     <div class="description">${category.description}</div>
   `;
 
-  if (category.url === "#") {
-    card.addEventListener("click", (event) => event.preventDefault());
-  }
+  // Placeholder until the SharePoint destination URLs are supplied.
+  // Replace category.url above with the relevant URL when ready.
+  const activate = () => {
+    if (category.url && category.url !== "#") {
+      window.open(category.url, "_blank", "noopener,noreferrer");
+    }
+  };
+
+  card.addEventListener("click", activate);
+  card.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      activate();
+    }
+  });
 
   grid.appendChild(card);
 });
