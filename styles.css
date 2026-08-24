@@ -321,3 +321,24 @@ body {
     padding-top: 22px;
   }
 }
+
+
+/* Card cleanup: cards are divs, not anchor links, so text will never appear underlined. */
+.category-card {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.category-card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.count {
+  text-decoration: none;
+}
+
+.category-name,
+.description {
+  text-decoration: none;
+}
