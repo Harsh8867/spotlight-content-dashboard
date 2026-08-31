@@ -1,7 +1,7 @@
 const categories = [
   {
     name: "Foundation",
-    count: 12,
+    count: 13,
     description: "Intro · Roadmap · Terminology",
     color: "#16d9ff",
     icon: "foundation",
@@ -17,7 +17,7 @@ const categories = [
   },
   {
     name: "Tools & Interactions",
-    count: 13,
+    count: 14,
     description: "Prompting · GenAI · Libraries",
     color: "#2ee98a",
     icon: "tools",
@@ -41,7 +41,7 @@ const categories = [
   },
   {
     name: "Strategy & Change",
-    count: 8,
+    count: 9,
     description: "Leadership · AI Capability Building",
     color: "#ff3e9d",
     icon: "strategy",
