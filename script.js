@@ -17,7 +17,7 @@ const categories = [
   },
   {
     name: "Tools & Interactions",
-    count: 14,
+    count: 16,
     description: "Prompting · GenAI · Libraries",
     color: "#2ee98a",
     icon: "tools",
@@ -33,7 +33,7 @@ const categories = [
   },
   {
     name: "Governance",
-    count: 11,
+    count: 12,
     description: "Responsible AI · Policy · Risk",
     color: "#ffc72c",
     icon: "governance",
