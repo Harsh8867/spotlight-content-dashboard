@@ -9,7 +9,7 @@ const categories = [
   },
   {
     name: "Engineering",
-    count: 18,
+    count: 19,
     description: "LLMs · RAG · System Design",
     color: "#9d4cff",
     icon: "engineering",
@@ -17,7 +17,7 @@ const categories = [
   },
   {
     name: "Tools & Interactions",
-    count: 16,
+    count: 18,
     description: "Prompting · GenAI · Libraries",
     color: "#2ee98a",
     icon: "tools",
