@@ -1,7 +1,7 @@
 const categories = [
   {
     name: "Foundation",
-    count: 13,
+    count: 14,
     description: "Intro · Roadmap · Terminology",
     color: "#16d9ff",
     icon: "foundation",
@@ -9,7 +9,7 @@ const categories = [
   },
   {
     name: "Engineering",
-    count: 19,
+    count: 20,
     description: "LLMs · RAG · System Design",
     color: "#9d4cff",
     icon: "engineering",
@@ -17,7 +17,7 @@ const categories = [
   },
   {
     name: "Tools & Interactions",
-    count: 18,
+    count: 19,
     description: "Prompting · GenAI · Libraries",
     color: "#2ee98a",
     icon: "tools",
